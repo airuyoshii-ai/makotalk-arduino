@@ -10,5 +10,5 @@ SPDX識別子：CC-BY-4.0。
 - 正式条項：https://creativecommons.org/licenses/by/4.0/legalcode.ja
 - 概要：https://creativecommons.org/licenses/by/4.0/deed.ja
 
-この説明で正式条項を変更しません。ルートの企業相談制の候補条文を、既存CC BY 4.0許諾への追加制限として適用しません。
+この説明で正式条項を変更しません。ルートの企業相談制の条文を、既存CC BY 4.0許諾への追加制限として適用しません。
 音声データには、このコード部分のCC BY 4.0を適用しません。
