@@ -1,0 +1,16 @@
+/.pio/
+/.test-output/
+/.zig-global-cache/
+/.zig-cache/
+/build/
+__pycache__/
+*.pyc
+*.bin
+*.elf
+*.exe
+*.obj
+*.pdb
+*.pcm
+*.wav
+*.zip
+*.mp4

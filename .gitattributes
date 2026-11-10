@@ -1,0 +1,2 @@
+# Preserve exact bytes for the checked file manifest across clones.
+* -text

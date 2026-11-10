@@ -1,0 +1,23 @@
+name: 企業・営利利用の事前相談
+description: 社内評価・研究・試作・製品化等の相談
+title: "[Consultation] "
+body:
+  - type: markdown
+    attributes:
+      value: 相談だけで許諾が成立するわけではありません。公開Issuesには個人情報・機密事項を記載せず、概要だけを記載してください。必要な連絡方法は応答時に調整します。
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 利用目的・範囲の概要
+      description: 評価、研究、試作、製品、サービス、予定する配布形態等
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 利用予定の版
+      placeholder: 2.1.0
+  - type: textarea
+    id: question
+    attributes:
+      label: 確認したい事項

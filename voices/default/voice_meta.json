@@ -1,0 +1,17 @@
+{
+  "meta_version": 1,
+  "voice_id": "default",
+  "symbol": "MKT_PREPARED_VOICE_DEFAULT",
+  "credit_display": "VOICEVOX:ずんだもん",
+  "credit_ascii": "VOICEVOX:Zundamon",
+  "credit_speech": "コノ_オンセーワ、ボイスボックスノ_ズンダモンヲ_シヨーシテ_イマス。",
+  "credit_speech_speed": 100,
+  "notice": "voices/default/NOTICE.md",
+  "terms_urls": [
+    "https://zunko.jp/con_ongen_kiyaku.html",
+    "https://voicevox.hiroshiba.jp/term/"
+  ],
+  "rights_holder": "SSS LLC.",
+  "terms_checked_jst": "2026-11-07",
+  "source_binary_sha256": "eea8ddd7523abaceb54b84342220735dc740706d95ac68ecdddf315cc9af3bd1"
+}

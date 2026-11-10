@@ -1,0 +1,26 @@
+name: 不具合報告
+description: 起動・発話・ライブラリの問題
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: 機密情報・個人情報・端末IDは伏せてください。Flash全体の消去は不要です。
+  - type: textarea
+    id: environment
+    attributes:
+      label: ボード・環境
+      description: ボード、Flash/PSRAM、Arduino-ESP32版、IDE設定、I2S配線
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現方法
+      description: 短いかな入力、期待した動作、実際の動作
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: エラー・ログ
+      description: mlastErrorと起動ログ。コンパイルのみか実機試験かも記載してください。
