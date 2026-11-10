@@ -84,7 +84,7 @@ void loop() {}
 既存のCC BY 4.0ファイルと第三者音声は[NOTICE.md](NOTICE.md)で適用範囲を分けています。
 営利企業の利用を制限するため、OSI定義のオープンソースとは表示しません。
 
-相談窓口案：[GitHub Issues](https://github.com/airuyoshii-ai/makotalk-arduino/issues)。問い合わせだけで利用許諾が成立するわけではありません。
+相談窓口：公開掲示板の開設までは[GitHub Issues](https://github.com/airuyoshii-ai/makotalk-arduino/issues)で対応します。掲示板の公開後、本ページで新しい窓口を案内します。問い合わせだけで利用許諾が成立するわけではありません。
 
 ## さらに読む
 
