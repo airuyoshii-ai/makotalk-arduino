@@ -1,6 +1,6 @@
 # MakoTalk — Arduinoで日本語を話す
 
-[変更履歴](CHANGELOG.md) ／ [声を変える](docs/VOICE_TUNING.md)
+[変更履歴](CHANGELOG.md) ／ [声を変える](docs/VOICE_TUNING.md) ／ [Webで試聴](https://airuyoshii-ai.github.io/makotalk-arduino/)
 
 ESP32-S3上で動く、かな入力の日本語音声合成ライブラリです。
 **ライブラリを読み込む → 音声辞書を選ぶ → I2Sピンを指定する → `mspeak()`で話す。**
@@ -24,7 +24,7 @@ void setup() {
 void loop() {}
 ```
 
-> **日本語版 2.1.1**。ソフトウェア利用条件は[LICENSE](LICENSE)、第三者素材・別条件は[NOTICE.md](NOTICE.md)を確認してください。
+> **日本語版 2.1.2**。ソフトウェア利用条件は[LICENSE](LICENSE)、第三者素材・別条件は[NOTICE.md](NOTICE.md)を確認してください。
 
 ## 用意するもの
 
@@ -38,7 +38,7 @@ void loop() {}
 
 ## 導入
 
-1. GitHubの「Code → Download ZIP」でフォルダー一式を取得します。
+1. [最新版リリース](https://github.com/airuyoshii-ai/makotalk-arduino/releases/latest)の利用者向けZIP（`MakoTalk_版番号.zip`）を取得します。「Code → Download ZIP」も利用できます。
 2. Arduino IDEの「スケッチ → ライブラリをインクルード → .ZIP形式のライブラリをインストール」で導入します。
 3. 「ファイル → スケッチ例 → MakoTalk → MinimalSpeak」を開きます。
 4. [ボード設定・配線](docs/INSTALL.md)を合わせて書き込みます。
@@ -66,7 +66,7 @@ void loop() {}
 
 ## 更新の方法
 
-[最新版リリース](https://github.com/airuyoshii-ai/makotalk-arduino/releases/latest)のSource code (zip)を取得します（開発中の最新版はCode → Download ZIP）。
+[最新版リリース](https://github.com/airuyoshii-ai/makotalk-arduino/releases/latest)の利用者向けZIPを取得します。音声サンプルは[Webで試聴](https://airuyoshii-ai.github.io/makotalk-arduino/)でき、ZIPには含みません。
 Arduino IDEで導入時と同じ「.ZIP形式のライブラリをインストール」を選び、上書き確認が出たら許可します。
 既存版があるため拒否される場合は、旧MakoTalkをスケッチブックのlibraries外へ退避してから再導入し、スケッチ例のExpressiveSpeakを確認します。
 
@@ -102,4 +102,4 @@ Arduino IDEで導入時と同じ「.ZIP形式のライブラリをインスト�
 - [音声の出典・クレジット](docs/VOICE_AND_CREDITS.md)
 - [検証結果と未確認範囲](docs/VALIDATION.md)
 - [変更履歴](CHANGELOG.md)
-- [改善提案](CONTRIBUTING.md)
+- [改善提案（GitHub）](https://github.com/airuyoshii-ai/makotalk-arduino/blob/main/CONTRIBUTING.md)

@@ -37,8 +37,10 @@ MakoTalk/
     voice_meta.json            音声・著作情報の正本
     NOTICE.md                  音声利用条件
   examples/MinimalSpeak/MinimalSpeak.ino
-  docs/ / tests/
+  docs/
 ```
+
+開発者向けの`tests/`はGitHub上に残し、利用者向けZIPには含めません。
 
 音声はライブラリと一緒に保持しますが、`MakoTalkVoiceDefault.h`を読み込んで使うスケッチにだけ組み込みます。
 別の音声では、対応するMKTV v3の配列とサイズを`MakoTalkVoiceImage`に指定します。

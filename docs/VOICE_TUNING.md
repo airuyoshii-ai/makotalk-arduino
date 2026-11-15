@@ -5,11 +5,11 @@
 Arduino IDEの「ファイル → スケッチ例 → MakoTalk → ExpressiveSpeak」を開き、[設定・配線](INSTALL.md)を合わせて書き込みます。
 「いかがでしょうか」を基準の声と優しさを狙った声で、続いて「こんにちわ」を基準の声と嬉しさを狙った声で話します。
 起動時にこの順で話して待機し、初回は音声のクレジット告知もあります。
-この追加例の実機での聞こえ方は未確認なので、まず[PCで作った聴き比べ](samples/voice_tuning/samples.md)を聞き、例の数字を変えて試してください。
+この追加例の実機での聞こえ方は未確認なので、まず[PCで作った聴き比べ](https://airuyoshii-ai.github.io/makotalk-arduino/)を聞き、例の数字を変えて試してください。
 
 以下の音声はすべて、**PC上で実ライブラリと声のもとになる音の断片のセット（辞書）を動かした結果**です。
 端末への音の出力と、告知済みかを保存する部分はPC用の代用品です。実機で録音・試聴した結果ではありません。
-作者：まこと／音声素材：**VOICEVOX:ずんだもん**。詳細は[サンプルのクレジット](samples/voice_tuning/CREDIT.txt)と[音声の出典・条件](VOICE_AND_CREDITS.md)を確認してください。
+作者：まこと／音声素材：**VOICEVOX:ずんだもん**。詳細は[サンプルのクレジット](https://airuyoshii-ai.github.io/makotalk-arduino/CREDIT.txt)と[音声の出典・条件](VOICE_AND_CREDITS.md)を確認してください。
 
 ## 速さ・高さ・音量を変える
 
@@ -35,12 +35,12 @@ say("いか'がでしょうか", 130, 100, 70);
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [基準](samples/voice_tuning/01_base_130.wav) | `いか'がでしょうか` | 130／100／70 | 比較の起点 |
-| [ゆっくり](samples/voice_tuning/07_slow.wav) | `いか'がでしょうか` | 80／100／70 | 速さだけ下げた違い |
-| [速く](samples/voice_tuning/08_fast.wav) | `いか'がでしょうか` | 200／100／70 | 数字どおりの時間比にはならない点 |
+| [基準](https://airuyoshii-ai.github.io/makotalk-arduino/#01_base_130) | `いか'がでしょうか` | 130／100／70 | 比較の起点 |
+| [ゆっくり](https://airuyoshii-ai.github.io/makotalk-arduino/#07_slow) | `いか'がでしょうか` | 80／100／70 | 速さだけ下げた違い |
+| [速く](https://airuyoshii-ai.github.io/makotalk-arduino/#08_fast) | `いか'がでしょうか` | 200／100／70 | 数字どおりの時間比にはならない点 |
 
 PC上で実ライブラリを動かした結果、長さは基準が0.99秒、ゆっくりが1.49秒、速くが0.76秒でした。
-この値は配布された[実測一覧](samples/voice_tuning/measured.csv)の値です。母音などの短さに下限があるため、速さの数字の比だけでは長さが決まりません。
+この値は配布された[実測一覧](https://github.com/airuyoshii-ai/makotalk-arduino/blob/v2.1.1/docs/samples/voice_tuning/measured.csv)の値です。母音などの短さに下限があるため、速さの数字の比だけでは長さが決まりません。
 
 ### 高さを聴き比べる
 
@@ -48,9 +48,9 @@ PC上で実ライブラリを動かした結果、長さは基準が0.99秒、�
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [基準](samples/voice_tuning/04_hello_base.wav) | `こんにちわ` | 130／100／70 | 比較の起点 |
-| [低く](samples/voice_tuning/09_low.wav) | `こんにちわ` | 130／70／70 | 高さだけ下げた違い |
-| [高く](samples/voice_tuning/10_high.wav) | `こんにちわ` | 130／140／70 | 高さだけ上げた違い |
+| [基準](https://airuyoshii-ai.github.io/makotalk-arduino/#04_hello_base) | `こんにちわ` | 130／100／70 | 比較の起点 |
+| [低く](https://airuyoshii-ai.github.io/makotalk-arduino/#09_low) | `こんにちわ` | 130／70／70 | 高さだけ下げた違い |
+| [高く](https://airuyoshii-ai.github.io/makotalk-arduino/#10_high) | `こんにちわ` | 130／140／70 | 高さだけ上げた違い |
 
 ### 音量を変える
 
@@ -60,7 +60,7 @@ if (!mspeak("いか'がでしょうか")) Serial.println(mlastError());
 ```
 
 `msetVolume`で音量を指定します。数字を上げても出力の制限が働くため、スピーカーから出る音の大きさを保証する値ではありません。
-同梱の[優しさを狙った例](samples/voice_tuning/03_gentle.wav)は「いか'がでしょうか?」、設定115／94／60です。
+Web試聴の[優しさを狙った例](https://airuyoshii-ai.github.io/makotalk-arduino/#03_gentle)は「いか'がでしょうか?」、設定115／94／60です。
 速さ・高さも変えているので、音量だけの比較には使わないでください。
 
 ## 記号で声の上がり下がりを変える
@@ -71,29 +71,29 @@ if (!mspeak("いか'がでしょうか")) Serial.println(mlastError());
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [位置を指定しない](samples/voice_tuning/12_no_accent.wav) | `いかがでしょうか` | 130／100／70 | `'`を入れない読み |
-| [「か」のあと](samples/voice_tuning/01_base_130.wav) | `いか'がでしょうか` | 130／100／70 | 声が下がる位置 |
-| [「い」のあと](samples/voice_tuning/13_accent_pos.wav) | `い'かがでしょうか` | 130／100／70 | `'`を移した違い |
+| [位置を指定しない](https://airuyoshii-ai.github.io/makotalk-arduino/#12_no_accent) | `いかがでしょうか` | 130／100／70 | `'`を入れない読み |
+| [「か」のあと](https://airuyoshii-ai.github.io/makotalk-arduino/#01_base_130) | `いか'がでしょうか` | 130／100／70 | 声が下がる位置 |
+| [「い」のあと](https://airuyoshii-ai.github.io/makotalk-arduino/#13_accent_pos) | `い'かがでしょうか` | 130／100／70 | `'`を移した違い |
 
 ### 語尾を上げる
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [基準](samples/voice_tuning/01_base_130.wav) | `いか'がでしょうか` | 130／100／70 | 比較の起点 |
-| [疑問の形](samples/voice_tuning/02_question.wav) | `いか'がでしょうか?` | 130／100／70 | `?`を付けた語尾 |
+| [基準](https://airuyoshii-ai.github.io/makotalk-arduino/#01_base_130) | `いか'がでしょうか` | 130／100／70 | 比較の起点 |
+| [疑問の形](https://airuyoshii-ai.github.io/makotalk-arduino/#02_question) | `いか'がでしょうか?` | 130／100／70 | `?`を付けた語尾 |
 
 ### 強調する
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [基準](samples/voice_tuning/04_hello_base.wav) | `こんにちわ` | 130／100／70 | 比較の起点 |
-| [強調](samples/voice_tuning/05_hello_excl.wav) | `こんにちわ!` | 130／100／70 | `!`で高く、短くなる違い |
+| [基準](https://airuyoshii-ai.github.io/makotalk-arduino/#04_hello_base) | `こんにちわ` | 130／100／70 | 比較の起点 |
+| [強調](https://airuyoshii-ai.github.io/makotalk-arduino/#05_hello_excl) | `こんにちわ!` | 130／100／70 | `!`で高く、短くなる違い |
 
 ### 間を入れる
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [間の例](samples/voice_tuning/11_pause.wav) | `こんにちわ、いか'がでしょうか?` | 130／100／70 | `、`を入れた位置の間 |
+| [間の例](https://airuyoshii-ai.github.io/makotalk-arduino/#11_pause) | `こんにちわ、いか'がでしょうか?` | 130／100／70 | `、`を入れた位置の間 |
 
 この音声は文も長くなっています。ほかの音声と記号だけを変えた比較ではありません。
 `、`と`。`は長い間、`_`は短い間です。間の長さが速さの設定で変わるかは未確認です。
@@ -106,8 +106,8 @@ sayGentle("いか'がでしょうか?");
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [疑問の形](samples/voice_tuning/02_question.wav) | `いか'がでしょうか?` | 130／100／70 | 同じ文の比較の起点 |
-| [優しさを狙う](samples/voice_tuning/03_gentle.wav) | `いか'がでしょうか?` | 115／94／60 | 少しゆっくり、低く、小さくする組み合わせ |
+| [疑問の形](https://airuyoshii-ai.github.io/makotalk-arduino/#02_question) | `いか'がでしょうか?` | 130／100／70 | 同じ文の比較の起点 |
+| [優しさを狙う](https://airuyoshii-ai.github.io/makotalk-arduino/#03_gentle) | `いか'がでしょうか?` | 115／94／60 | 少しゆっくり、低く、小さくする組み合わせ |
 
 「優しい」は設定の狙いです。実機での聴感は未確認です。
 PC上で実ライブラリを動かした結果、配布データの基準音声（`いか'がでしょうか`、130／100／70）は0.99秒・声の高さの中央値192Hz、優しさを狙った音声は1.10秒・187Hzでした。
@@ -121,8 +121,8 @@ sayHappy("こんにちわ!");
 
 | 音声 | かな文字列 | 設定 | 聴きどころ |
 |---|---|---|---|
-| [強調だけ](samples/voice_tuning/05_hello_excl.wav) | `こんにちわ!` | 130／100／70 | `!`で高さが大きく上がる例 |
-| [嬉しさを狙う](samples/voice_tuning/06_hello_happy.wav) | `こんにちわ!` | 138／75／70 | 高さの設定を下げて強調と組み合わせる狙い |
+| [強調だけ](https://airuyoshii-ai.github.io/makotalk-arduino/#05_hello_excl) | `こんにちわ!` | 130／100／70 | `!`で高さが大きく上がる例 |
+| [嬉しさを狙う](https://airuyoshii-ai.github.io/makotalk-arduino/#06_hello_happy) | `こんにちわ!` | 138／75／70 | 高さの設定を下げて強調と組み合わせる狙い |
 
 `!`が高すぎるときは、高さの設定を下げて試します。嬉しく聞こえるかは実機未確認です。
 PC上で実ライブラリを動かした結果、声の高さの中央値は強調だけの例が415Hz、嬉しさを狙った例が313Hzでした。
@@ -194,5 +194,6 @@ say("いか'がでしょうか?", 130, 100, 70);
 声の上がり下がりの大きさの独立設定、句ごとのプリセット、音素ごとの長さは今後の拡張案です。
 現在は未実装で、対応を約束するものではありません。他のボード・他の声への対応も今後の検討です。
 
-仕様の根拠は[確認済みデータ](../tests/voice_tuning/facts.json)、用語は[言いかえ表](../tests/voice_tuning/glossary.md)、数値は[配布されたPC実測一覧](samples/voice_tuning/measured.csv)です。
-PCで音声を再生成する方法は[付録](../tests/voice_tuning/README.md)を参照してください。
+試聴音声は[Webの聴き比べページ](https://airuyoshii-ai.github.io/makotalk-arduino/)にあります。ライブラリZIPに聴き比べ用WAVは含みません。
+仕様・実測値・用語と再生成の記録は、[v2.1.1時点の開発資料](https://github.com/airuyoshii-ai/makotalk-arduino/tree/v2.1.1/tests/voice_tuning)に保存しています。
+提供音声とPC再生成の完全一致確認は不合格でした。その結果と未確認事項も同資料に残しています。
