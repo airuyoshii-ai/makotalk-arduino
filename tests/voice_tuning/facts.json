@@ -1,0 +1,31 @@
+{
+  "_header": "facts.json v1.0.0 2026-11-15 JST — INTONATION改訂用の確認済み事実。出典はリポジトリ内ファイル。ここに無い数値・挙動は文書に書かない。",
+  "api": {
+    "mspeak": {"input": "かな(ひらがな可)と _ ' ! ? 、。 ー ッ のみ。漢字・英数字・U+2019は拒否", "returns": "bool。失敗時 mlastError()", "playback": "同期。全文を先に合成し、再生と無音排出が終わるまで戻らない", "source": "src/MakoTalkSpeaker.cpp speak()/write()"},
+    "msetSpeed":  {"range": [40, 300], "meaning": "モーラ長 = 標準×100/n", "engine_initial": 100, "readme_example": 130, "floors_ms": {"vowel_min": 75, "sokuon": 95}, "source": "MakoTalkEngine.cpp:159,232 / MakoTalkEngine.h:181"},
+    "msetPitch":  {"range": [40, 250], "meaning": "基準F0 = 辞書f0Base×n/100", "engine_initial": 100, "dictionary_f0Base_hz": 200, "f0_clamp_hz": [50, 500], "source": "MakoTalkEngine.cpp:160,187"},
+    "msetVolume": {"range": [0, 100], "meaning": "ゲイン = n/100×0.95", "after_mbegin": 70, "output_limits": {"peak": 12288, "rms_target": 5000}, "source": "MakoTalkSpeaker.cpp:26,write()"}
+  },
+  "symbols": {
+    "'": "アクセント核。直前モーラの後で下がる。アクセント比 通常1.28 / ! の句 2.10",
+    "?": "文末上昇。最後のモーラ F0 ×1.45",
+    "!": "強調。アクセント比2.10、上昇×1.85、長さ×0.85(最大で基準の約3.9倍)",
+    "_": "短い間 150ms",
+    "、。": "長い間 330ms。句の境界",
+    "ー ッ": "長音・促音。各1モーラ",
+    "source": "MakoTalkEngine.cpp parse()/applyProsody()"
+  },
+  "limits": {"max_morae_per_call": 192, "buffer_seconds_range": [8, 30], "buffer_seconds_default": 8, "morae_in_8s_at_speed100_approx": "50前後(目安。実機未確認)", "default_mora_ms": 160, "source": "MakoTalkEngine.h:97,152 / MakoTalkSpeaker.cpp validateKana()/begin()"},
+  "cannot_do": ["音色(声質)の変更", "音素ごとの速度", "抑揚の大きさの独立調整(アクセント比は固定)", "句ごとの速度・高さ・音量", "{gentle}形式のプリセット記法"],
+  "measured_on_host_pc": {
+    "note": "実ライブラリ+実辞書をPC上で実行(I2S/NVSはモック)。F0はpyworld harvest。実機・聴感は未確認。samples/measured.csv に全値。",
+    "pairs": [
+      {"claim": "優しい設定(115,94,60)は基準(130,100,70)より長く、F0中央値が低い", "base": {"sec": 0.99, "f0_median_hz": 192}, "gentle": {"sec": 1.10, "f0_median_hz": 187}},
+      {"claim": "速度200は130の約0.65倍にならない(母音・促音の下限のため)", "speed130_sec": 0.99, "speed200_sec": 0.76, "speed80_sec": 1.49},
+      {"claim": "「こんにちわ!」はピッチ100だとF0が高く張り付く", "pitch100_excl": {"f0_median_hz": 415, "f0_max_hz": 458}, "pitch75_happy": {"f0_median_hz": 313, "f0_max_hz": 471}}
+    ],
+    "caution": "F0最大値の一部は推定誤差を含むため、文書では中央値と長さを主に使うこと。"
+  },
+  "unconfirmed": ["実機(ESP32-S3)での聴感・合成時間・PSRAM消費", "50モーラ前後/8秒の実機値", "間(_ 、。)の長さが速度設定で変わるか", "g2p(makotalk_g2p)の最新版の出力仕様"],
+  "voice_credit": {"default_voice": "VOICEVOX:ずんだもん(ノーマル)", "rule": "サンプルWAVを公開する場合、docs/VOICE_AND_CREDITS.md の表示例に従いクレジットを付ける", "source": "docs/VOICE_AND_CREDITS.md"}
+}

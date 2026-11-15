@@ -1,0 +1,9 @@
+MakoTalk／原著作者：まこと
+https://github.com/airuyoshii-ai/makotalk-arduino
+音声素材：VOICEVOX:ずんだもん（ノーマル）
+
+このフォルダーのWAVは、実ライブラリと既定辞書をPC上で実行して生成した聴き比べです。
+実機で録音した音声ではありません。実機での聴感は未確認です。
+音声の利用・再配布条件と表示例は ../../VOICE_AND_CREDITS.md と
+../../../voices/default/NOTICE.md を確認してください。
+ソフトウェアの利用条件と、音声素材の条件は別です。
