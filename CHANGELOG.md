@@ -1,5 +1,15 @@
 # 変更履歴
 
+## 2.1.1 — 声の調整ガイドと例を追加
+
+- 追加：`docs/VOICE_TUNING.md`、`examples/ExpressiveSpeak/ExpressiveSpeak.ino`。
+- 追加：`docs/samples/voice_tuning/`の聴き比べ音声・クレジット・PC実測一覧。
+- 追加：`tests/voice_tuning/`の根拠データとPC用再生成プログラム。
+- 追加：`docs/INTONATION.md`を新ガイドへの案内ページとして用意。
+- 変更：README・APIへのリンク、更新方法、版情報、配布ファイル一覧を更新。
+- 発話コード・辞書・既存の最小例は変更なし。追加例の実機聴感・所要時間・追加メモリ消費量は未確認。
+- 2026-11-15（JST）：文書・サンプル追加のパッチ更新。PC音声と実機確認を区別。
+
 ## 2.1.0 — Arduinoライブラリ版
 
 - `MakoTalk.h`と辞書ヘッダー、`mbegin`、`mspeak`による簡易API。

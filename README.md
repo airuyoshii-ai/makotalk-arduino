@@ -1,5 +1,7 @@
 # MakoTalk — Arduinoで日本語を話す
 
+[変更履歴](CHANGELOG.md) ／ [声を変える](docs/VOICE_TUNING.md)
+
 ESP32-S3上で動く、かな入力の日本語音声合成ライブラリです。
 **ライブラリを読み込む → 音声辞書を選ぶ → I2Sピンを指定する → `mspeak()`で話す。**
 PCからのWAV転送・クラウド・ネット接続は不要です。
@@ -22,7 +24,7 @@ void setup() {
 void loop() {}
 ```
 
-> **日本語版 2.1.0**。ソフトウェア利用条件は[LICENSE](LICENSE)、第三者素材・別条件は[NOTICE.md](NOTICE.md)を確認してください。
+> **日本語版 2.1.1**。ソフトウェア利用条件は[LICENSE](LICENSE)、第三者素材・別条件は[NOTICE.md](NOTICE.md)を確認してください。
 
 ## 用意するもの
 
@@ -61,6 +63,12 @@ void loop() {}
 ボード変更後は容量・パーティションも再確認してください。4MBのDefaultアプリ領域は約1.2MBで、約1.56MBのサンプルが入りません。
 設定修正後は通常のスケッチ書き込みをやり直します。全Flash消去やNVS消去は不要です。
 実際にOctal Flashを搭載する別ボードでは、そのボード固有の仕様を優先してください。
+
+## 更新の方法
+
+[最新版リリース](https://github.com/airuyoshii-ai/makotalk-arduino/releases/latest)のSource code (zip)を取得します（開発中の最新版はCode → Download ZIP）。
+Arduino IDEで導入時と同じ「.ZIP形式のライブラリをインストール」を選び、上書き確認が出たら許可します。
+既存版があるため拒否される場合は、旧MakoTalkをスケッチブックのlibraries外へ退避してから再導入し、スケッチ例のExpressiveSpeakを確認します。
 
 ## 入力できるもの
 
